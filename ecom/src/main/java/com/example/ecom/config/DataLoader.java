@@ -153,7 +153,7 @@ public class DataLoader implements CommandLineRunner {
             product1.setSeller(seller1);
             product1.setName("Premium Laptop Pro");
             product1.setDescription("High-performance laptop with 16GB RAM and 512GB SSD");
-            product1.setPrice(new BigDecimal("1299.99"));
+            product1.setPrice(new BigDecimal("129999.99"));
             product1.setStock(50);
             product1.setSku("LAPTOP-001");
             product1.setCategory(laptops);
@@ -167,7 +167,7 @@ public class DataLoader implements CommandLineRunner {
             product2.setSeller(seller1);
             product2.setName("Wireless Mouse");
             product2.setDescription("Ergonomic wireless mouse with precision tracking");
-            product2.setPrice(new BigDecimal("29.99"));
+            product2.setPrice(new BigDecimal("299.99"));
             product2.setStock(200);
             product2.setSku("MOUSE-001");
             product2.setCategory(electronics);
@@ -178,7 +178,7 @@ public class DataLoader implements CommandLineRunner {
             product3.setSeller(seller1);
             product3.setName("USB-C Hub");
             product3.setDescription("7-in-1 USB-C hub with HDMI, USB ports, and SD card reader");
-            product3.setPrice(new BigDecimal("49.99"));
+            product3.setPrice(new BigDecimal("499.99"));
             product3.setStock(150);
             product3.setSku("HUB-001");
             product3.setCategory(electronics);
@@ -189,7 +189,7 @@ public class DataLoader implements CommandLineRunner {
             product4.setSeller(seller2);
             product4.setName("Designer T-Shirt");
             product4.setDescription("Premium cotton t-shirt with modern design");
-            product4.setPrice(new BigDecimal("39.99"));
+            product4.setPrice(new BigDecimal("399.99"));
             product4.setStock(100);
             product4.setSku("TSHIRT-001");
             product4.setCategory(fashion);
@@ -200,7 +200,7 @@ public class DataLoader implements CommandLineRunner {
             product5.setSeller(seller2);
             product5.setName("Denim Jeans");
             product5.setDescription("Comfortable stretch denim jeans");
-            product5.setPrice(new BigDecimal("79.99"));
+            product5.setPrice(new BigDecimal("799.99"));
             product5.setStock(80);
             product5.setSku("JEANS-001");
             product5.setCategory(fashion);
@@ -211,7 +211,7 @@ public class DataLoader implements CommandLineRunner {
             product6.setSeller(seller3);
             product6.setName("Garden Tools Set");
             product6.setDescription("Complete 10-piece garden tools set");
-            product6.setPrice(new BigDecimal("59.99"));
+            product6.setPrice(new BigDecimal("599.99"));
             product6.setStock(40);
             product6.setSku("GARDEN-001");
             product6.setCategory(home);

@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* E-Commerce Design System - Clean, Modern, Professional */
+
+@layer base {
+  :root {
+    /* Core palette - Teal commerce theme */
+    --background: 0 0% 99%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    /* Primary - Teal/Emerald */
+    --primary: 168 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 168 76% 32%;
+
+    /* Secondary - Warm gray */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 25%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent - Amber for CTAs and highlights */
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 168 76% 36%;
+
+    --radius: 0.625rem;
+
+    /* Sidebar */
+    --sidebar-background: 220 20% 98%;
+    --sidebar-foreground: 220 10% 30%;
+    --sidebar-primary: 168 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 168 76% 95%;
+    --sidebar-accent-foreground: 168 76% 25%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 168 76% 36%;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(168 76% 36%) 0%, hsl(180 60% 45%) 100%);
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --card-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --badge-sale: 0 72% 51%;
+    --badge-new: 168 76% 36%;
+    --rating-star: 45 93% 47%;
+  }
+
+  .dark {
+    --background: 220 20% 7%;
+    --foreground: 220 14% 96%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 168 76% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 168 76% 50%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 168 76% 45%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 220 14% 90%;
+    --sidebar-primary: 168 76% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 168 76% 20%;
+    --sidebar-accent-foreground: 168 76% 80%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 168 76% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-hero {
+    @apply bg-primary text-primary-foreground hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:opacity-90 transition-all duration-200;
+  }
+
+  .card-product {
+    @apply bg-card rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg;
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-product:hover {
+    box-shadow: var(--card-shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .badge-sale {
+    @apply bg-destructive text-destructive-foreground text-xs font-semibold px-2 py-0.5 rounded;
+  }
+
+  .badge-new {
+    @apply bg-primary text-primary-foreground text-xs font-semibold px-2 py-0.5 rounded;
+  }
+
+  .rating-star {
+    color: hsl(var(--rating-star));
+  }
+
+  .input-search {
+    @apply bg-secondary border-0 focus:ring-2 focus:ring-primary/20 transition-all;
+  }
+
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-medium;
+  }
+
+  .section-heading {
+    @apply text-2xl md:text-3xl font-bold text-foreground;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .dashboard-card {
+    @apply bg-card rounded-xl p-6 shadow-sm border border-border;
+  }
+
+  .stat-card {
+    @apply bg-card rounded-xl p-6 border border-border hover:border-primary/30 transition-colors;
+  }
+
+  .table-header {
+    @apply bg-muted/50 text-muted-foreground text-sm font-medium;
+  }
+
+  .form-label {
+    @apply text-sm font-medium text-foreground;
+  }
+
+  .form-input {
+    @apply w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all;
+  }
+
+  .page-header {
+    @apply mb-8;
+  }
+
+  .page-title {
+    @apply text-3xl font-bold text-foreground;
+  }
+
+  .page-subtitle {
+    @apply text-muted-foreground mt-1;
+  }
+
+  /* Skeleton loading animation */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+
+  /* Toast animations */
+  .toast-enter {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-hero {
+    background: var(--hero-gradient);
+  }
+
+  .shadow-card {
+    box-shadow: var(--card-shadow);
+  }
+
+  .shadow-card-lg {
+    box-shadow: var(--card-shadow-lg);
+  }
+}
