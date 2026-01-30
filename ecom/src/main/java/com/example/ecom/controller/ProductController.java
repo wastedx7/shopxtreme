@@ -41,11 +41,11 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
     
-    @PostMapping
-    public ResponseEntity<ProductResponse> createProduct(@Valid @RequestBody ProductRequest request) {
-        ProductResponse product = productService.createProduct(request);
-        return ResponseEntity.ok(product);
-    }
+    // @PostMapping
+    // public ResponseEntity<ProductResponse> createProduct(@Valid @RequestBody ProductRequest request) {
+    //     ProductResponse product = productService.createProduct(request);
+    //     return ResponseEntity.ok(product);
+    // }
     
     @PutMapping("/{id}")
     public ResponseEntity<ProductResponse> updateProduct(@PathVariable UUID id,
@@ -74,4 +74,13 @@ public class ProductController {
         Page<ReviewResponse> reviews = reviewService.getProductReviews(id, pageable);
         return ResponseEntity.ok(reviews);
     }
+
+    // temp
+    @PostMapping
+    public ResponseEntity<ProductResponse> createProduct(@Valid @RequestBody ProductRequest request) {
+    System.out.println(">>> createProduct endpoint hit");
+    ProductResponse product = productService.createProduct(request);
+    return ResponseEntity.ok(product);
+    }
+
 }

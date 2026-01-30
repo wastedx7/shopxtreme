@@ -26,6 +26,7 @@ import SellerDashboard from "./pages/seller/SellerDashboard";
 import SellerProducts from "./pages/seller/SellerProducts";
 import SellerProductForm from "./pages/seller/SellerProductForm";
 import SellerAnalytics from "./pages/seller/SellerAnalytics";
+import SellerOrders from "./pages/seller/SellerOrders";
 
 const queryClient = new QueryClient();
 
@@ -55,7 +56,6 @@ const App = () => (
 
             {/* Seller Routes */}
             <Route path="/seller" element={<ProtectedRoute allowedRoles={['ROLE_SELLER']}><SellerDashboard /></ProtectedRoute>} />
-            {/* <Route path="/seller/*" element={<ProtectedRoute allowedRoles={['ROLE_SELLER']}><SellerDashboard /></ProtectedRoute>} /> */}
             <Route
               path="/seller/products"
               element={
@@ -88,6 +88,15 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="/seller/orders"
+              element={
+                <ProtectedRoute allowedRoles={['ROLE_SELLER']}>
+                  <SellerOrders />
+                </ProtectedRoute>
+              }
+            />
+
             {/* Admin Routes */}
             <Route path="/admin" element={<ProtectedRoute allowedRoles={['ROLE_ADMIN']}><AdminDashboard /></ProtectedRoute>} />
             <Route path="/admin/*" element={<ProtectedRoute allowedRoles={['ROLE_ADMIN']}><AdminDashboard /></ProtectedRoute>} />
